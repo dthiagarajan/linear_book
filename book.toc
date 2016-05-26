@@ -1,0 +1,29 @@
+\contentsline {chapter}{\numberline {1}Groups, Rings and Fields}{3}
+\contentsline {section}{\numberline {1.1}Groups}{3}
+\contentsline {section}{\numberline {1.2}Rings}{3}
+\contentsline {section}{\numberline {1.3}Fields}{3}
+\contentsline {chapter}{\numberline {2}Vector Spaces, Subspaces and Quotient Spaces}{4}
+\contentsline {chapter}{\numberline {3}Spans, Linear Independence and Bases}{5}
+\contentsline {chapter}{\numberline {4}Linear Transformations and the Isomorphism Theorems}{6}
+\contentsline {section}{\numberline {4.1}Nilpotent Transformations}{6}
+\contentsline {section}{\numberline {4.2}Projection Transformations}{6}
+\contentsline {chapter}{\numberline {5}Matrices and Linear Systems}{7}
+\contentsline {chapter}{\numberline {6}Applications}{8}
+\contentsline {section}{\numberline {6.1}Discrete Dynamics}{8}
+\contentsline {section}{\numberline {6.2}Markov Chains}{8}
+\contentsline {section}{\numberline {6.3}Stochastic Matrices}{8}
+\contentsline {chapter}{\numberline {7}Determinants, Invertibility, and Eigen-theory}{9}
+\contentsline {section}{\numberline {7.1}Determinants}{9}
+\contentsline {section}{\numberline {7.2}Invertibility}{9}
+\contentsline {section}{\numberline {7.3}Eigenvalues and Eigenvectors}{9}
+\contentsline {section}{\numberline {7.4}Diagonalization and Similarity}{9}
+\contentsline {section}{\numberline {7.5}Spectral Value Decomposition}{9}
+\contentsline {chapter}{\numberline {8}Inner Products}{10}
+\contentsline {chapter}{\numberline {9}Adjoints, Spectral Theorem, Principal Axis Theorem}{11}
+\contentsline {chapter}{\numberline {10}Jordan and Rational Canonical Forms}{12}
+\contentsline {section}{\numberline {10.1}Invariant Subspaces}{12}
+\contentsline {section}{\numberline {10.2}Jordan Canonical Forms}{12}
+\contentsline {section}{\numberline {10.3}Rational Canonical Forms}{12}
+\contentsline {section}{\numberline {10.4}Applications}{12}
+\contentsline {chapter}{\numberline {11}Application to Differential Equations}{13}
+\contentsline {chapter}{\numberline {12}The Similarity Problem}{14}
