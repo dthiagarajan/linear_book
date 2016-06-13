@@ -7,3 +7,4 @@ I welcome all feedback! Email me at [dt372 at cornell dot edu] if you'd like to 
 Again, this is a work in progress, so not all parts of the book are completed - below is a list of all completed parts of this book.
 
 * Table of Contents (without subsections)
+* First Chapter (draft)
