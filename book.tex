@@ -38,14 +38,96 @@
 \author{Dilip Thiagarajan}
 \maketitle
 \tableofcontents{}
+\chapter*{Preface}
+This reading is not meant as a comprehensive take at learning linear algebra and the associated mathematics necessary, but as an extension that may be helpful to simplify what should be taught that is necessary in all topics to linear algebra. As such, I consider this writing to be a helpful extension to traditional textbooks, and will therefore not write any exercises to complement each section unless requested to.
+\\ \\
+My main goal in writing this is to clarify to myself the motivation of all the things I've learned in linear algebra, as well as to introduce to myself and the reader specific interesting applications of linear algebra. At the time of the beginning of this writing, I have completed two linear algebra courses, and am embarking on learning how to apply machine learning and deep learning. As such, the applications in this book may present a heavy bias towards those topics, but there are many more fruitful applications of linear that are useful in today's world.
+\\ \\
+Finally, in almost all topics brought up in this reading, unless explicitly specified otherwise, I will be using finite sets in analysis. The study of infinite sets in linear is an interesting one, but one that I am not completely familiar with, and one who's application in conventional use is not particularly clear yet.
 
 \chapter{Groups, Rings and Fields}
 The concept of mathematical sets is important in all fields of mathematics, and is especially true in linear algebra given the ubiquity of vector spaces and subspaces. As such, the idea of fields, a close analog to vector spaces, is quite important to mention in a proper reading of the topic, and thus, we begin by introducing groups, upon which we build rings, which we consequently use to build a field. 
+\section{Sets}
+For our purposes, we will define a \textbf{set} as a collection of distinct elements. In practice, we write sets as follows:
+$$\{1,2,3,4\}$$
+where the above set has 4 elements, or it's cardinality is 4. The following examples of sets, and are useful sets that will be seen in almost all of the subsequent chapters.
+$$\N = \{0,1,2,3,4,...\}$$
+$$\Z = \{...,-1,0,1,2,3,4,5,...\}$$
+We can write sets of other types of elements, not necessarily like above. For example, we can write the set of ordered pairs of natural numbers as follows:
+$$\N \times \N = \{(0,0), (1,0), (0,1), (2,0), ...\}$$
+If a collection of elements is contained within a set, we say that collection of elements is a \textbf{subset}. For example, we note that the natural numbers are a subset of the integers. We can write this symbolically as
+$$\N \subseteq \Z \text{ or } \N \subset \Z $$
+where $\subseteq$ indicates that the collection of elements may comprise the whole set, and $\subset$ indicates that the collection of elements strictly does not comprise the whole set.
+\\ \\
+We see subsets appear in the \textbf{powerset} of a set. Suppose $S = \{1,2,3\}$. The powerset of $S$ is as follows:
+$$2^S = \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}$$
+where $\emptyset$ indicates the set $\{\}$, or the \textbf{empty set}. Note that the cardinality of the set $2^S$, or $|2^S|$, is equivalent to $2^{|S|}$. The proof is left as an exercise to the reader (hint: induction).
 \section{Groups}
+A \textbf{group} of elements is a set of elements with an associated binary operation on those elements. Formally, suppose the set of elements $G$ is equipped with the operation $f: G \times G \rightarrow G$. Then, we say that $G$ is a group.
+\subsection{Properties and Axioms}
+The operation $f$ must satisfy the following four properties:
+\begin{enumerate}
+\item Closure: For all $x,y \in G$, $f(x,y) \in G$.
+\item Associativity: For all $x,y,z \in G$, $f(x,f(y,z)) = f(f(x,y),z)$.
+\item Identity: There exists $i \in G$ such that $f(i,x) = f(x,i) = x$, for all $x \in G$.
+\item Inverse: For all $x \in G$, there exists $x_i \in G$ such that $f(x, x_i) = f(x_i, x) = i$. 
+\end{enumerate}
+We say that a group $G$ is \textbf{abelian} if $ab = ba$ for all $a,b \in G$. For convenience, henceforth, we will write $f(x,y)$ as $x \cdot y$ or $xy$. Given these properties, we arrive at some noteworthy conclusions regarding the elements of the group $G$. One of those is the following property:
+\\ \\
+\textbf{Cancellation Property}: Given $a,b,c \in G$, if $ab = ac$, then $b = c$; if $ac = bc$, then $a = b$. The proof comes immediately from the application of the inverse and closure axioms.
+\\ \\
+There is a lot more useful applications of groups in other branches of mathematics, especially in abstract algebra, but for our purposes, knowing these definitions and this one property will be sufficient to build up into more intricate mathematical sets.
 \section{Rings}
+A \textbf{ring} of elements is a set of elements with two associated binary operations, which often generalize to the addition and multiplication, and through these generalizations, give way to rings of elements that aren't necessarily numerical in nature, including polynomials, vectors, functions, and matrices.
+\subsection{Properties and Axioms}
+In essence, a ring is an abelian group with a second binary operation. The two operations must interact in a specific way, as detailed by the following axioms. Letting the first operation be addition, and the second operation be multiplication for a ring $R$:
+\begin{enumerate}
+\item Associativity of addition: for any $a,b,c \in R$, $(a+b)+c = a+(b+c)$
+\item Commutativity of addition: for any $a,b \in R$, $a+b = b+a$
+\item Additive Identity: there exists an element $0 \in R$ such that for all $a \in R$, $a + 0 = 0 + a = a$.
+\item Additive Inverses: for all $a \in R$, there exists $a_i \in R$ such that $a + a_i = 0$.
+\item Distributivity of multiplication over addition: for any $a,b,c \in R$, $(a+b)c = ac + bc$.
+\item Associativity of multplication: for any $a,b,c \in R$, $a(bc)=(ab)c$.
+\item Multiplicative identity: there exists an element $1 \in R$ such that for all $a \in R$, $a(1) = 1(a) = a$.
+\end{enumerate}
+We note that while it's possible to define subtraction within a ring, it is not possible to define division in a ring unless all multiplicative inverses are within the ring itself, i.e. for all $a \ne 0 \in R$, there exists $a_i \in R$ such that $a(a_i) = 1$.
+\\ \\
+A ring is commutative when it's multiplication operation is commutative. As an example, the set of natural numbers and the set of integers are both rings. Additionally, the integers modulo some number $n$, denoted $\Z/n\Z$, will also be a ring.
 \section{Fields}
+A \textbf{field} is a set of elements with two associated binary operations, again which often generalize to addition and multiplication.
+\subsection{Properties and Axioms}
+A field is just a commutative ring where all the multiplicative inverses exist within the ring itself. The natural numbers and the integers do not make fields, but the set of rational numbers and the set of reals do make fields. Below are the relevant axioms for a field $R$:
+\begin{enumerate}
+\item Associativity of addition: for any $a,b,c \in R$, $(a+b)+c = a+(b+c)$
+\item Commutativity of addition: for any $a,b \in R$, $a+b = b+a$
+\item Additive Identity: there exists an element $0 \in R$ such that for all $a \in R$, $a + 0 = 0 + a = a$.
+\item Additive Inverses: for all $a \in R$, there exists $a_i \in R$ such that $a + a_i = 0$.
+\item Distributivity of multiplication over addition: for any $a,b,c \in R$, $(a+b)c = ac + bc$.
+\item Associativity of multplication: for any $a,b,c \in R$, $a(bc)=(ab)c$.
+\item Multiplicative identity: there exists an element $1 \in R$ such that for all $a \in R$, $a(1) = 1(a) = a$.
+\item Commutativity of multiplication: for any $a,b \in R$, $ab = ba$.
+\item Multiplicative Inverses: For each nonzero $a \in R$, there exists $a_i \in R$ such that $a(a_i) = 1$.
+\end{enumerate}
+From here, we can arrive at a few interesting and useful properties. \\ \pagebreak
+\\ 
+\textbf{Lemma}: Let $F$ be a field. Then, for any element $a \in F$, $a \cdot 0 = 0 \cdot a = 0$. \\
+\textit{Proof}: To see $a \cdot 0 = 0 \cdot a = 0$, we use the fact that $0 + 0 = 0$ by the additive identity axiom. Multiplying this by $a$, we get:
+$$a(0+0) = a(0)$$
+which, by the distributivity axiom, gives us:
+$$0 \cdot a + 0 \cdot a = 0 \cdot a \rightarrow 0 \cdot a = 0$$
+which also implies that $a \cdot 0 = 0$ by the commutativity of the multiplication operation.
+\\ \\
+\textbf{Lemma}: A field $F$ has the cancellation property, i.e. if $a,b,c \in F$ such that $ab = ac$, then either $a = 0$ or $b = c$. \\
+\textit{Proof}: Rearranging the equation and using the distributive property, we have that $ab - ac = 0 \rightarrow a(b-c) = 0$. From this, we can arrive at one of two conclusions: either $a = 0$, or $a \ne 0$, in which case we multiply both sides by $a^{-1}$ to get $b - c = 0 \rightarrow b = c$.
+\\ \\
+\textbf{Lemma}: Let $p$ be a prime number. Then $\Z/p\Z$, the integers modulo $p$, is a field. \\
+\textit{Proof}: We know already that $\Z/n\Z$ is a commutative ring, so we only really need to check that every nonzero element of the set has a multiplicative inverse in the set. 
 
-
+Consider arbitrary $[a] \ne [0] \in \Z/p\Z$. We know immediately that $p$ will not divide $a$, and because $p$ is prime, the GCD of $p$ and $a$ must be $1$, which means they are coprime. As a result, we can show that there exists $[x]$ such that $[a][x] = [1]$ (the proof of this is left to the reader), and thus, $[x]$ is a multiplicative inverse of $a$, and thus this property will hold for all $[a] \ne [0]$.
+\\ \\
+\textbf{Definition}: Let $F$ be a field. If $p$ is the smallest positive integer such that $p = 0_F$, we say $F$ has \textbf{characteristic $p$}; if there is no positive integer $p = 0_F$, then we say $F$ has characteristic $0$.
+\\ \\
+As suggested by the notation, the characteristic of a field will always be prime or $0$. To show this, we need to show that if $F$ has nonzero characteristic $p$, then $p$ really is prime. Suppose $n = a \cdot b$, where $a,b$ are positive integers. Then, clearly $n_F = a_F \cdot b_F$ (i.e. the associated equivalence classes). However, because $n_F = 0$ by definition, we have $a_F \cdot b_F = 0$, which means either $a_F = 0$ or $b_F = 0$. Without loss of generality, suppose $a_F = 0$. Then, $a_F \ge n_F$ because $n_F$ is the smallest positive integer with $n_F = 0$, and $a_F \le n_F$ because $a_F is a factor of n_F$, so $a_F = n$, so $b_F = 1$, and so the factorization of $n$ must be a product of $n$ and $1$, indicating that $n$ must be prime.
 \chapter{Vector Spaces, Subspaces and Quotient Spaces}
 
 

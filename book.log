@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 MAY 2016 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JUN 2016 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,72 +543,131 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 
 [2]
-Chapter 1.
+Underfull \hbox (badness 10000) in paragraph at lines 42--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--47
+
+ []
+
 [3
 
 ]
-Chapter 2.
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+
+ []
+
 [4
 
 ]
-Chapter 3.
-[5
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
-]
-Chapter 4.
-[6
+ []
 
-]
-Chapter 5.
-[7
 
-]
-Chapter 6.
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 117--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
+
+ []
+
+[7]
+Chapter 2.
 [8
 
 ]
-Chapter 7.
+Chapter 3.
 [9
 
 ]
-Chapter 8.
+Chapter 4.
 [10
 
 ]
-Chapter 9.
+Chapter 5.
 [11
 
 ]
-Chapter 10.
+Chapter 6.
 [12
 
 ]
-Chapter 11.
+Chapter 7.
 [13
 
 ]
-Chapter 12.
+Chapter 8.
 [14
+
+]
+Chapter 9.
+[15
+
+]
+Chapter 10.
+[16
+
+]
+Chapter 11.
+[17
+
+]
+Chapter 12.
+[18
 
 ] (./book.aux) ) 
 Here is how much of TeX's memory you used:
- 4058 strings out of 493089
- 57707 string characters out of 6134842
- 124394 words of memory out of 5000000
- 7438 multiletter control sequences out of 15000+600000
- 12681 words of font info for 50 fonts, out of 8000000 for 9000
+ 4061 strings out of 493089
+ 57746 string characters out of 6134842
+ 126394 words of memory out of 5000000
+ 7440 multiletter control sequences out of 15000+600000
+ 13334 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,43p,418b,204s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,43p,763b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb>
-Output written on book.pdf (15 pages, 83569 bytes).
+m/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on book.pdf (19 pages, 152089 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
