@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1465858112 "book.tex" "book.pdf" "book" 1465858114
+["pdflatex"] 1465883898 "book.tex" "book.pdf" "book" 1465883898
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -94,11 +94,11 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "book.aux" 1465858114 3859 0b00c566dd1cfbec4ee99b2a70240ff9 ""
-  "book.tex" 1465858112 13010 263678eb9c81c12416734cb81e497455 ""
-  "book.toc" 1465858114 2308 2f62c432c200876e3e11411b07947b5d ""
+  "book.aux" 1465883898 4285 83824920e15073d70c5fab40c701c9e1 ""
+  "book.tex" 1465883897 17223 81e4df0cd90c0206d1eb9a1595390384 ""
+  "book.toc" 1465883898 2586 0472265a5f2a8451fee0f7d5a509924f ""
   (generated)
+  "book.log"
   "book.aux"
   "book.toc"
   "book.pdf"
-  "book.log"

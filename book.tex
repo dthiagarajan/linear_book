@@ -45,8 +45,7 @@ My main goal in writing this is to clarify to myself the motivation of all the t
 \\ \\
 Finally, in almost all topics brought up in this reading, unless explicitly specified otherwise, I will be using finite sets in analysis. The study of infinite sets in linear is an interesting one, but one that I am not completely familiar with, and one who's application in conventional use is not particularly clear yet.
 
-\chapter{Groups, Rings and Fields}
-The concept of mathematical sets is important in all fields of mathematics, and is especially true in linear algebra given the ubiquity of vector spaces and subspaces. As such, the idea of fields, a close analog to vector spaces, is quite important to mention in a proper reading of the topic, and thus, we begin by introducing groups, upon which we build rings, which we consequently use to build a field. 
+\chapter{Sets, Relations, and Modular Arithmetic}
 \section{Sets}
 For our purposes, we will define a \textbf{set} as a collection of distinct elements. In practice, we write sets as follows:
 $$\{1,2,3,4\}$$
@@ -62,6 +61,41 @@ where $\subseteq$ indicates that the collection of elements may comprise the who
 We see subsets appear in the \textbf{powerset} of a set. Suppose $S = \{1,2,3\}$. The powerset of $S$ is as follows:
 $$2^S = \{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}$$
 where $\emptyset$ indicates the set $\{\}$, or the \textbf{empty set}. Note that the cardinality of the set $2^S$, or $|2^S|$, is equivalent to $2^{|S|}$. The proof is left as an exercise to the reader (hint: induction).
+
+\section{Relations}
+Relations, at the most basic level, can be thought of as a binary operation that outputs true or false on the input. In practice, we think of relations as describing whether there is an interaction between two elements, like the make of two cars, or the school two students go to. For sets, this same idea holds. \\ \\
+Building upon this idea, let's consider the set of all students in some state, and call this set $S$. We can build a set $P$, where the elements of $P$ are ordered pairs $(a,b)$, where $a$ and $b$ are students that go to the same school. Intuitively, looking at $P$ wholistically, we see that $P \subseteq S \times S$ must be true. \\ \\
+This is how we'll formally define a relation $R$; namely, $R = P \subseteq S \times S$, where $\forall (a,b) \in P, aRb$
+\subsection{Equivalence Relations}
+For our purposes, we'll only be interested in \textbf{equivalence relations}, which are special kinds of relations. More specifically, equivalence relations are relations with the following properties:
+\begin{enumerate}
+\item Reflexive: If $a \in S$, then $aRa$.
+\item Symmetric: If $a,b \in S$ such that $aRb$, then $bRa$.
+\item Transitive: If $a,b,c \in S$ such that $aRb$ and $bRc$, then $aRc$.
+\end{enumerate}
+Going back to our example of students in some state, we see that the relation "going to the same school" is an equivalence relation, because:
+\begin{enumerate}
+\item Every student goes to the same school as himself.
+\item If student 1 goes to the same school as student 2, then student 2 clearly goes to the same school as student 1.
+\item If student 1 goes to the same school as student 2, and student 2 goes to the same school as student 3, then student 1 and student 3 go to the same school as well.
+\end{enumerate}
+\section{Equivalence Classes}
+Recall that sets may consist of sets of elements as well. We now introduce the concept of sets modulo an equivalence relation. To clarify what this means, we'll start with an example: consider the set $\Z/2\Z$, which is read "the set of integers mod 2". Intuitively, we can somewhat tell that this will just separate the integers into even and odd numbers, but how is this formally defined? \\ \\
+The equivalence relation here is actually the "mod 2" mentioned - we can partition the integers into sets where each set consists of elements such that each of those elements mod 2 is the same thing. More formally, let's consider $\Z/m\Z$, and each set $S$ in this:
+$$\forall e \in S, e \text{ mod } m \equiv n | 0 \le n < m - 1$$
+where the $n$ for each $S$ is distinct, i.e. for two different sets in $\Z/m\Z$, the result of taking an element in one set mod $m$ will be different from the result of taking an element in the other set mod $m$. \\ \\
+In general, given a set $S$ and an equivalence relation $R$, we say that $S/R$, or the set $S$ modulo $R$, is the set of $l$ \textbf{equivalence classes} $e_i, 0 \le i < l$ such that:
+\begin{enumerate}
+\item For all $a_1, a_2 \in e_i$, $a_1Ra_2$ holds.
+\item For all $a_i \in e_i, a_j \in e_j, i \ne j$, $a_iRa_j$ does not hold.
+\end{enumerate}
+Equivalence classes can be written as 
+$$e_i = [a_i], \text{ where } a_i \in e_i$$
+where we see $a_i$ is a representative of the equivalence class $e_i$.\\ \\
+Operations on equivalence classes can be defined, but we must be careful in saying that they are \textbf{well-defined}. Addition and multiplication of equivalence classes in numerical sets such as $\Z/m\Z$ work out fine, but exponentiation in such sets is a bit intricate, and requires a slight modification to become well-defined. \\ \\ 
+To show that an operation on equivalence classes is well-defined for our numerical sets, we must show that the result of the operation on arbitrary equivalence classes is the same, regardless of which representative is used to represent the equivalence class. For example, using this idea, we can show that multiplication and addition are well-defined (this is left as an exercise to the reader; keep in mind that numbers can be written out as something like $a = qm + r$, where $0 \le r < m$, and that any two elements belonging to the same equivalence class must be congruent mod $m$).
+\chapter{Groups, Rings and Fields}
+The concept of mathematical sets is important in all fields of mathematics, and is especially true in linear algebra given the ubiquity of vector spaces and subspaces. As such, the idea of fields, a close analog to vector spaces, is quite important to mention in a proper reading of the topic, and thus, we begin by introducing groups, upon which we build rings, which we consequently use to build a field.
 \section{Groups}
 A \textbf{group} of elements is a set of elements with an associated binary operation on those elements. Formally, suppose the set of elements $G$ is equipped with the operation $f: G \times G \rightarrow G$. Then, we say that $G$ is a group.
 \subsection{Properties and Axioms}
@@ -108,7 +142,7 @@ A field is just a commutative ring where all the multiplicative inverses exist w
 \item Commutativity of multiplication: for any $a,b \in R$, $ab = ba$.
 \item Multiplicative Inverses: For each nonzero $a \in R$, there exists $a_i \in R$ such that $a(a_i) = 1$.
 \end{enumerate}
-From here, we can arrive at a few interesting and useful properties. \\ \pagebreak
+From here, we can arrive at a few interesting and useful properties. \\
 \\ 
 \textbf{Lemma}: Let $F$ be a field. Then, for any element $a \in F$, $a \cdot 0 = 0 \cdot a = 0$. \\
 \textit{Proof}: To see $a \cdot 0 = 0 \cdot a = 0$, we use the fact that $0 + 0 = 0$ by the additive identity axiom. Multiplying this by $a$, we get:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JUN 2016 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 JUN 2016 01:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,100 +557,139 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--47
 ]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
 
  []
 
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 75--80
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--80
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 117--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--131
-
- []
-
-[7]
 Chapter 2.
-[8
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
+
+ []
+
+[7
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
+
+ []
+
+[9]
 Chapter 3.
-[9
-
-]
-Chapter 4.
 [10
 
 ]
-Chapter 5.
+Chapter 4.
 [11
 
 ]
-Chapter 6.
+Chapter 5.
 [12
 
 ]
-Chapter 7.
+Chapter 6.
 [13
 
 ]
-Chapter 8.
+Chapter 7.
 [14
 
 ]
-Chapter 9.
+Chapter 8.
 [15
 
 ]
-Chapter 10.
+Chapter 9.
 [16
 
 ]
-Chapter 11.
+Chapter 10.
 [17
 
 ]
-Chapter 12.
+Chapter 11.
 [18
+
+]
+Chapter 12.
+[19
+
+]
+Chapter 13.
+[20
 
 ] (./book.aux) ) 
 Here is how much of TeX's memory you used:
  4061 strings out of 493089
  57746 string characters out of 6134842
- 126394 words of memory out of 5000000
+ 128394 words of memory out of 5000000
  7440 multiletter control sequences out of 15000+600000
  13334 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,43p,765b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,10n,43p,765b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
@@ -664,10 +703,10 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on book.pdf (19 pages, 151446 bytes).
+Output written on book.pdf (21 pages, 159494 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
