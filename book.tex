@@ -43,7 +43,13 @@ This reading is not meant as a comprehensive take at learning linear algebra and
 \\ \\
 My main goal in writing this is to clarify to myself the motivation of all the things I've learned in linear algebra, as well as to introduce to myself and the reader specific interesting applications of linear algebra. At the time of the beginning of this writing, I have completed two linear algebra courses, and am embarking on learning how to apply machine learning and deep learning. As such, the applications in this book may present a heavy bias towards those topics, but there are many more fruitful applications of linear that are useful in today's world.
 \\ \\
-Finally, in almost all topics brought up in this reading, unless explicitly specified otherwise, I will be using finite sets in analysis. The study of infinite sets in linear is an interesting one, but one that I am not completely familiar with, and one who's application in conventional use is not particularly clear yet.
+In almost all topics brought up in this reading, unless explicitly specified otherwise, I will be using finite sets in analysis. The study of infinite sets in linear is an interesting one, but one that I am not completely familiar with, and one who's application in conventional use is not particularly clear yet.
+\\ \\
+Some of the explicit assumptions I assume the reader has made include the following (constantly being added to):
+\begin{itemize}
+\item Basic knowledge of proof by induction
+\item Terminology such as: the solution of a matrix equation being consistent, the rank of a matrix, and reduced row echelon forms.
+\end{itemize}
 
 \chapter{Sets, Relations, and Modular Arithmetic}
 \section{Sets}
@@ -162,10 +168,91 @@ Consider arbitrary $[a] \ne [0] \in \Z/p\Z$. We know immediately that $p$ will n
 \textbf{Definition}: Let $F$ be a field. If $p$ is the smallest positive integer such that $p = 0_F$, we say $F$ has \textbf{characteristic $p$}; if there is no positive integer $p = 0_F$, then we say $F$ has characteristic $0$.
 \\ \\
 As suggested by the notation, the characteristic of a field will always be prime or $0$. To show this, we need to show that if $F$ has nonzero characteristic $p$, then $p$ really is prime. Suppose $n = a \cdot b$, where $a,b$ are positive integers. Then, clearly $n_F = a_F \cdot b_F$ (i.e. the associated equivalence classes). However, because $n_F = 0$ by definition, we have $a_F \cdot b_F = 0$, which means either $a_F = 0$ or $b_F = 0$. Without loss of generality, suppose $a_F = 0$. Then, $a_F \ge n_F$ because $n_F$ is the smallest positive integer with $n_F = 0$, and $a_F \le n_F$ because $a_F$ is a factor of $n_F$, so $a_F = n$, so $b_F = 1$, and so the factorization of $n$ must be a product of $n$ and $1$, indicating that $n$ must be prime.
-\chapter{Vector Spaces, Subspaces and Quotient Spaces}
 
+\chapter{Spans and Linear Independence}
+With the notion of these mathematical sets, we can consider the nature of a finite set more wholistically, especially when the set consists of $n$-dimensional vectors. More specifically, we'll look at the space (which can be thought of as an infinite set) a set of vectors can span, whether a set of vectors are \textit{linearly independent}, and how to describe a set that spans a space as simply as possible. These will prove useful to build upon for future concepts, such as vector spaces, and more.
 
-\chapter{Spans, Linear Independence and Bases}
+\section{Spans}
+Consider a set of $m$ $n$-dimensional vectors $v_i \in \R^k$, i.e.
+$$S = \{v_1, v_2, ..., v_{m-1}, v_m\}$$
+We say that the linear span, or \textbf{span} of this set $S$ is the following infinite set:
+$$\text{Span of S} = L[S] = \{\sum_{i=1}^{n} a_iv_i, a_i \in \R, 1 \le i,j \le m\}$$
+Note that the coefficients $a,b$ are from the same set the vectors are built on, namely, $\R$. This applies for any mathematical sets (i.e. including complex numbers, integers, and so on).
+\\ \\
+\textbf{Theorem}: Once again, consider a set $S$ as defined above, and let $A$ be a matrix with these vectors as columns. Then, $v$ is in the span of $S$ iff $Ax = v$ is consistent.
+\textbf{Proof}: Consider the forward statement, i.e. assume $v$ is in the span of $S$. Then, there exist corresponding $a_i$ such that
+$$\sum_{i=1}^{n} a_iv_i = v$$
+and thus, $Ax = v$ must be consistent, with $x$ merely being the coefficients $a_i$.
+\\ \\
+Now consider the backwards statement. If $Ax = v$ is consistent, then we chose the coefficients $a_i$ corresponding to $x$, and come to the same conclusion.
+\\ \\
+We can come to a couple of interesting theorems just from the terminology we have so far. 
+\\ \\
+\textbf{Theorem}: The following statements are equivalent regarding an $m \times n$ matrix $A$:
+\begin{enumerate}
+\item The span of the columns $A$ is $\R^m$.
+\item The equation $Ax = b$ is consistent for every $b \in \R^m$.
+\item The rank of $A$ is m.
+\item The reduced row echelon form of $A$ has no zero rows.
+\end{enumerate}
+Because spans are infinite in cardinality, we can see that the span of any collection of vectors in the span of a set $S$ is still contained in that same span. More formally: \\ \\
+\textbf{Theorem}: For any finite set $S$, the following statements are true:
+\begin{itemize}
+\item $S$ is contained in $L[S]$.
+\item If $S'$ is any finite set contained in $L[S]$, then $L[S']$ is also contained in $L[S]$.
+\item For any vector $z$ in $\R^k$, $L[S] = L[S \cup \{z\}]$ iff $z \in L[S]$.
+\end{itemize}
+
+\section{Linear Independence}
+Once again, we consider a set $S$, consisting of $m$ $n$-dimensional vectors in $\R^k$. We say that $S$ is \textbf{linearly independent} iff the only linear combination of $v_i$ that results in the $0$ vector is the trivial linear combination. More specifically:
+$$\sum_{i=1}^{m} a_iv_i = 0 \text{ iff } a_i = 0$$
+Consequently, we say that $S$ is \textbf{linearly dependent} if there exists a non-trivial linear combination of $v_i$ that results in the $0$ vector, i.e. $a_i \ne 0$ for some $i$ (can be more than one of the coefficients).
+\\ \\
+From what we've developed thus far, we can characterize the conditions that are equivalent to linear independence.
+\\ \\
+\textbf{Theorem}: The following statements regarding an $m \times n$ matrix $A$ are equivalent:
+\begin{enumerate}
+\item The columns of $A$ are linearly independent.
+\item The system $Ax = b$ has at most one solution for $b \in \R^m$.
+\item The nullity of $A$ is $0$, i.e. the dimension of the null space of $A$ is $0$.
+\item The rank of $A$ is $n$.
+\item The columns of the reduced row echelon form of $A$ are distinct standard vectors in $\R^m$.
+\item The only solution to $Ax = 0$ is $x = 0$.
+\end{enumerate}
+For future reference, the system $Ax = 0$ is referred to as the homogenous system. In addition, it's easy to see that any set of vectors containing the zero vector is linearly dependent, and any set containing just one non-zero vector is a linearly independent set. 
+\\ \\
+The concept that ties together spans and linear independence will be introduced in the next chapter.
+\chapter{Vector Spaces, Subspaces, Bases, and Quotient Spaces}
+Having defined these mathematical sets, we now introduce the idea of sets, that later on come with more geometric notions like length, and distance between elements. Vector spaces give us a better idea of the geometric notion behind vectors themselves, rather than thinking of them as a string of $n$ numbers. Additionally, they often show up in conventional applications, and are thus useful to look at.
+
+\section{Vector Spaces}
+
+\section{Subspaces}
+
+\section{Bases}
+We now arrive at what ties linear independence and spans together: \textbf{bases}. In essence, bases are finite sets of vectors that are the minimal description of a set (finite or infinite) set of vectors.  More formally, a basis for a vector space $S$ is a linearly independent set $B$ such that $L[B] = S$. 
+\\ \\
+As an example, we consider the Cartesian coordinate plane, which is just $\R^2$. The $x$ and $y$ axes form a basis for $\R^2$, namely, the vectors $\begin{bmatrix} 1 & 0 \end{bmatrix}^T$ and $\begin{bmatrix} 0 & 1 \end{bmatrix}^T$.
+\\ \\
+There are essentially three important ideas regarding bases that are incredibly useful for all of the more complex theory, and are thus formalized below (all without proof, which is left as an exercise to the reader):
+\\
+\textbf{Theorem - Reduction Principle}: Let $V$ be a subspace of $\R^n$ spanned by a finite set $S$. Then, there is a basis for $V$ contained in $S$.
+\\
+\textbf{Theorem - Extension Principle}: Let $V$ be a subspace of $\R^n$. Every linearly independent subset of $V$ is contained in a basis for $V$.
+\\
+\textbf{Theorem - Basis Theorem}: Let $V$ be a subspace of $\R^n$. Then, $V$ has a basis, and every basis of $V$ has the same number of vectors.
+\\ \\
+Note that from our previous analysis of linear independence, any single non-zero vector in $V$ is a linearly independent set, and thus, the extension principle allows us to find a basis on essentially any starting vector. Then, suppose we had two bases for $V$, $B_1$ and $B_2$, one with $j$ vectors, and the other with $k$ vectors. Knowing that the number of linearly independent vectors in $V$ is at most the number of vectors in a spanning set, we have $j \le k$ and $k \le j$, i.e. $j = k$.
+\\ \\
+Now, using our definition of a basis, we can say that the dimension of a subspace $V$ (other than $\{0\}$) is the number of vectors in any basis of $V$. The dimension of $\{0\}$ is defined to be 0 by convention. With this, we can enumerate our formal conditions:
+\\ \\
+\textbf{Theorem}: Let $V$ be a subspace of $\R^n$ with dimension $k$. Then, any two of the following conditions on a subset $S$ of $V$ imply that $S$ is a basis for $V$:
+\begin{enumerate}
+\item $S$ is linearly independent.
+\item $S$ spans $V$.
+\item $S$ has exactly $k$ vectors.
+\end{enumerate}
+\section{Quotient Spaces}
 
 
 \chapter{Linear Transformations and the Isomorphism Theorems}

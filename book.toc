@@ -10,28 +10,34 @@
 \contentsline {subsection}{\numberline {2.2.1}Properties and Axioms}{8}
 \contentsline {section}{\numberline {2.3}Fields}{8}
 \contentsline {subsection}{\numberline {2.3.1}Properties and Axioms}{8}
-\contentsline {chapter}{\numberline {3}Vector Spaces, Subspaces and Quotient Spaces}{10}
-\contentsline {chapter}{\numberline {4}Spans, Linear Independence and Bases}{11}
-\contentsline {chapter}{\numberline {5}Linear Transformations and the Isomorphism Theorems}{12}
-\contentsline {section}{\numberline {5.1}Nilpotent Transformations}{12}
-\contentsline {section}{\numberline {5.2}Projection Transformations}{12}
-\contentsline {chapter}{\numberline {6}Matrices and Linear Systems}{13}
-\contentsline {chapter}{\numberline {7}Applications}{14}
-\contentsline {section}{\numberline {7.1}Discrete Dynamics}{14}
-\contentsline {section}{\numberline {7.2}Markov Chains}{14}
-\contentsline {section}{\numberline {7.3}Stochastic Matrices}{14}
-\contentsline {chapter}{\numberline {8}Determinants, Invertibility, and Eigen-theory}{15}
-\contentsline {section}{\numberline {8.1}Determinants}{15}
-\contentsline {section}{\numberline {8.2}Invertibility}{15}
-\contentsline {section}{\numberline {8.3}Eigenvalues and Eigenvectors}{15}
-\contentsline {section}{\numberline {8.4}Diagonalization and Similarity}{15}
-\contentsline {section}{\numberline {8.5}Spectral Value Decomposition}{15}
-\contentsline {chapter}{\numberline {9}Inner Products}{16}
-\contentsline {chapter}{\numberline {10}Adjoints, Spectral Theorem, Principal Axis Theorem}{17}
-\contentsline {chapter}{\numberline {11}Jordan and Rational Canonical Forms}{18}
-\contentsline {section}{\numberline {11.1}Invariant Subspaces}{18}
-\contentsline {section}{\numberline {11.2}Jordan Canonical Forms}{18}
-\contentsline {section}{\numberline {11.3}Rational Canonical Forms}{18}
-\contentsline {section}{\numberline {11.4}Applications}{18}
-\contentsline {chapter}{\numberline {12}Application to Differential Equations}{19}
-\contentsline {chapter}{\numberline {13}The Similarity Problem}{20}
+\contentsline {chapter}{\numberline {3}Spans and Linear Independence}{10}
+\contentsline {section}{\numberline {3.1}Spans}{10}
+\contentsline {section}{\numberline {3.2}Linear Independence}{11}
+\contentsline {chapter}{\numberline {4}Vector Spaces, Subspaces, Bases, and Quotient Spaces}{12}
+\contentsline {section}{\numberline {4.1}Vector Spaces}{12}
+\contentsline {section}{\numberline {4.2}Subspaces}{12}
+\contentsline {section}{\numberline {4.3}Bases}{12}
+\contentsline {section}{\numberline {4.4}Quotient Spaces}{13}
+\contentsline {chapter}{\numberline {5}Linear Transformations and the Isomorphism Theorems}{14}
+\contentsline {section}{\numberline {5.1}Nilpotent Transformations}{14}
+\contentsline {section}{\numberline {5.2}Projection Transformations}{14}
+\contentsline {chapter}{\numberline {6}Matrices and Linear Systems}{15}
+\contentsline {chapter}{\numberline {7}Applications}{16}
+\contentsline {section}{\numberline {7.1}Discrete Dynamics}{16}
+\contentsline {section}{\numberline {7.2}Markov Chains}{16}
+\contentsline {section}{\numberline {7.3}Stochastic Matrices}{16}
+\contentsline {chapter}{\numberline {8}Determinants, Invertibility, and Eigen-theory}{17}
+\contentsline {section}{\numberline {8.1}Determinants}{17}
+\contentsline {section}{\numberline {8.2}Invertibility}{17}
+\contentsline {section}{\numberline {8.3}Eigenvalues and Eigenvectors}{17}
+\contentsline {section}{\numberline {8.4}Diagonalization and Similarity}{17}
+\contentsline {section}{\numberline {8.5}Spectral Value Decomposition}{17}
+\contentsline {chapter}{\numberline {9}Inner Products}{18}
+\contentsline {chapter}{\numberline {10}Adjoints, Spectral Theorem, Principal Axis Theorem}{19}
+\contentsline {chapter}{\numberline {11}Jordan and Rational Canonical Forms}{20}
+\contentsline {section}{\numberline {11.1}Invariant Subspaces}{20}
+\contentsline {section}{\numberline {11.2}Jordan Canonical Forms}{20}
+\contentsline {section}{\numberline {11.3}Rational Canonical Forms}{20}
+\contentsline {section}{\numberline {11.4}Applications}{20}
+\contentsline {chapter}{\numberline {12}Application to Differential Equations}{21}
+\contentsline {chapter}{\numberline {13}The Similarity Problem}{22}
